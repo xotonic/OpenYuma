@@ -1,0 +1,15 @@
+version: "3.4"
+
+services:
+
+  openyuma-server:
+    image: openyuma
+
+
+  openyuma-yangcli:
+    image: openyuma
+    #stdin_open: true
+    #tty: true
+    depends_on: 
+      - openyuma-server
+    command: yangcli

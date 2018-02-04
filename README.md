@@ -30,3 +30,15 @@ connect to that port with ncclient.
 To use *yangcli* as mentioned above, you `docker exec openyuma /bin/bash` to
 enter the running container. Use *admin* as both the user and password.
 
+Run server and `yancli` on different hosts with `docker-compose`:
+```
+docker-compose.exe run openyuma-yangcli && docker-compose down
+```
+
+After `yangcli` session `docker-compose` will shutdown server container.
+
+Then in cli to connect to server:
+
+```
+connect server=openyuma-server user=admin password=admin
+```
